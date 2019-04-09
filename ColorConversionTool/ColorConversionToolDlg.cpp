@@ -52,11 +52,7 @@ BOOL CAboutDlg::OnInitDialog()
 
 	this->SetWindowText(_T("关于..."));
 
-#ifdef _UNICODE
 	WCHAR str[64];
-#else
-	CHAR str[64];
-#endif
 	wsprintf(str, _T("%s V%d.%d.%d"), APP_NAME, MAJOR_VERSION, MINOR_VERSION, REVERSION);
 	m_stcNameAndVer.SetWindowText(str);
 
@@ -311,7 +307,6 @@ std::string CColorConversionToolDlg::color_hex2rgb(char* pszHEX, COLORREF &color
 	int g = 0;
 	int b = 0;
 
-	// 获取RGB值
 	szBuff[0] = ptr[0];
 	szBuff[1] = ptr[1];
 	sscanf_s(szBuff, "%x", &r);
@@ -327,7 +322,6 @@ std::string CColorConversionToolDlg::color_hex2rgb(char* pszHEX, COLORREF &color
 	return ss.str();
 }
 
-// RGB转换为16进制颜色码
 void CColorConversionToolDlg::OnBnClickedBtn2Hex()
 {
 	CString source;
@@ -355,7 +349,6 @@ void CColorConversionToolDlg::OnBnClickedBtn2Hex()
 	}
 }
 
-// 十六进制转换为RGB
 void CColorConversionToolDlg::OnBnClickedBtn2Rgb()
 {
 	CString source;
@@ -383,7 +376,6 @@ void CColorConversionToolDlg::OnBnClickedBtn2Rgb()
 	}
 }
 
-// 复制十六进制值
 void CColorConversionToolDlg::OnBnClickedBtnCpHex()
 {
 	CString source;
@@ -413,7 +405,6 @@ void CColorConversionToolDlg::OnBnClickedBtnCpHex()
 	sourceContext = NULL;
 }
 
-// 复制RGB值
 void CColorConversionToolDlg::OnBnClickedBtnCpRgb()
 {
 	CString source;

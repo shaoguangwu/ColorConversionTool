@@ -50,13 +50,13 @@ private:
 	CEdit m_edtTransHex;
 	CEdit m_edtTransRgb;
 private:
-	CStatusBar m_startusBar; // 状态栏
+	CStatusBar m_startusBar;
 	COLORREF   m_colorRGB;
 	COLORREF   m_colorHEX;
 
 	void setPlaceHolderText();
 	void setWindowTitle();
-	void initStatusBar();    // 初始化状态栏
+	void initStatusBar();
 	// pszRGB : 255, 255, 255 或 255,255,255
 	// return : #FFFFFF
 	std::string color_rgb2hex(char* pszRGB, COLORREF &color);
@@ -73,6 +73,7 @@ public:
 	afx_msg void OnBnClickedBtnCpHex();
 	// 复制RGB颜色值
 	afx_msg void OnBnClickedBtnCpRgb();
+	//
 	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
 private:
 	CEdit m_edtColorRgb;
