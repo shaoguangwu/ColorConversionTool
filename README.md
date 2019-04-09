@@ -1,7 +1,7 @@
 # ColorConversionTool
 RGB color value and hexadecimal color code conversion tool.
 
-[Download Package](https://raw.githubusercontent.com/shaoguangwu/Package/master/ColorConversionTool.zip)
+[Download Software Package.](https://raw.githubusercontent.com/shaoguangwu/Package/master/ColorConversionTool.zip)
 
 Screenshot:
 
